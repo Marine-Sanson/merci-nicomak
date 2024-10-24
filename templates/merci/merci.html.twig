@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}L'app des mercis de Nicomak - par Marine Sanson - Remercier{% endblock %}
+
+{% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+
+        <div class ="container alert alert-{{ label }} alert-dismissible row mx-auto w-50" id="flashMess" role="alert">
+            <div class="alert-message col">
+                {{ message }}
+            </div>
+            <button type="button" class="btn-close col" data-bs-dismiss="alert"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="w-50 mx-auto">
+        {{ form_errors(merciForm) }}
+
+        {{ form_start(merciForm) }}
+            {{ form_row(merciForm.reason) }}
+            {{ form_row(merciForm.recipient) }}
+
+            <button type="submit" class="btn btn-lg">Envoyer</button>
+
+        {{ form_end(merciForm) }}
+    </div>
+{% endblock %}

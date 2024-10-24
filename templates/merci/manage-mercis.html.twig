@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}L'app des mercis de Nicomak - par Marine Sanson - Gérer mes mercis{% endblock %}
+
+{% block body %}
+    <h2 class="text-center mt-5">Voila toutes les personnes que vous avez remercié :</h2>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+
+        <div class ="container alert alert-{{ label }} alert-dismissible row mx-auto w-50" id="flashMess" role="alert">
+            <div class="alert-message col">
+                {{ message }}
+            </div>
+            <button type="button" class="btn-close col" data-bs-dismiss="alert"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        {% endfor %}
+    {% endfor %}
+
+
+    <ul>
+    {% for merci in mercis %}
+        <li class="card w-75 mx-auto mt-5">
+            <div class="card-header">
+                Le {{ merci.createdAt|date("d/m/Y à H:i") }}
+            </div>
+            <div class="card-body row">
+                <img class="col avatar object-fit-contain " src="{{ asset('img/') ~ merci.recipient.avatar }}"/>
+                <p class="col my-auto">{{ merci.recipient.username }} pour {{ merci.reason}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ path('app_update_merci', { id: merci.id }) }}" class="text-center m-auto">
+                    <button type="button" class="btn btn-rvs btn-sm mx-2">Modifier</button>
+                </a>
+                <a href="{{ path('app_delete_merci', { id: merci.id }) }}" class="text-center m-auto">
+                    <button type="button" class="btn btn-rvs btn-sm mx-2">Supprimer</button>
+                </a>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>{% endblock %}
