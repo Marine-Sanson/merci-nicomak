@@ -1,0 +1,68 @@
+li{
+    list-style: none;
+}
+
+.navbar{
+    background-color: #BF85B9;
+    color: #F27928;
+    font-weight: 700;
+}
+
+.btn{
+    background-color: white;
+    border : 2px solid #F27928;
+    text-decoration: none;
+    color: #F27928;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background-color: #F27928;
+    border : 2px solid white;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-rvs{
+    background-color: #F27928;
+    border : 2px solid white;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-rvs:hover{
+    background-color: white;
+    border : 2px solid #F27928;
+    color: #F27928;
+    font-weight: 700;
+}
+
+.logoNav{
+    max-width: 5rem;
+}
+
+.logo{
+    max-width: 10rem;
+    margin-left: 1rem;
+}
+
+.avatar{
+    max-width: 8rem;
+    height: auto;
+}
+
+.card{
+    border : 4px solid #F27928;
+    color: #BF85B9;
+    font-weight: 700;
+}
+
+.card-header{
+    background-color: #CDE199;
+    border-bottom : 2px solid #F27928;
+}
+
+a{
+    text-decoration: none;
+}
