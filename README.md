@@ -1,7 +1,7 @@
-# merci-nicomak
+# Merci-nicomak
 Test technique pour la société Nicomak
 
-## pour faire tourner ce projet :
+## Pour faire tourner ce projet :
 
 Commencer par faire la ligne de commande suivante :
 
@@ -29,8 +29,8 @@ Pour faire tourner ce projet vous pouvez utiliser le server de symfony :
 symfony server:start -d
 ```
 
-## pour se connecter :
+## Pour se connecter :
 
 Pour vous connecter si vous avez chargé le jeu de données vous pouvez utiliser chacun·e des 6 utilisat·eur·rices en utilisant son prénom et le mot de passe, très original suivant : *mdpass*
 
-## N'hésitez pas à revenir vers moi si vous avez des questions !
+## J'espère que ce projet va vous plaire, n'hésitez pas à revenir vers moi si vous avez des questions !
